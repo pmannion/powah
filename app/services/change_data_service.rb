@@ -1,7 +1,7 @@
 class ChangeDataService
 
   def petitions_for_event(client: ChangeClient.new, petition_builder: ChangePetitionBuilder)
-    SearchTerm.each do |term|
+    SearchTerm.all.each do |term|
       petitions = client.petitions_for_term(term.name)
       petitions.each do|petition|
         petition_builder.new(data: petition, event_id: term.event_id)
