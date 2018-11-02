@@ -3,8 +3,6 @@
 namespace :petitions do
   desc 'populate petitions'
   task populate_petitions: :environment do
-    event = Event.create(name: 'United Airlines')
-    search_term = event.search_terms.build(name: 'United Airlines').save
     ChangeDataService.new.petitions_for_event(client: ChangeClient.new, petition_builder: ChangePetitionBuilder)
     ChangeDataService.new.petitions_for_event(client: WhitehouseClient.new, petition_builder: WhitehousePetitionBuilder)
     Petitions.pluck(:petition_id).each do |petition_id|
