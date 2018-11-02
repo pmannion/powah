@@ -5,7 +5,7 @@ class ChangeClient
     request_items(URI.encode(url))
   end
 
-  def comments_for_petition(petition_id: petition_id, offset_pos: nil)
+  def comments_for_petition(petition_id: , offset_pos: nil)
     offset = offset_pos ? "&offset=#{offset_pos}" : ''
     url = "https://www.change.org/api-proxy/-/comments?commentable_type=Event&commentable_id=#{petition_id}&order_by=created_at&role=comment#{offset}"
     request_items(URI.encode(url))
