@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Changer</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <style>
+      #head-name{
+        margin-top: 40px;
+        font-size: 45px;
+        font-family:
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <%= image_tag('https://d1yn1kh78jj1rr.cloudfront.net/image/thumbnail/r7sCZ1fUiq1jsnz7/storyblocks-protest-poster-raised-fist-in-protest-vector-illustration_rrkLshxrM_thumb.jpg', height: 100, width: 100) %>
+        </div>
+        <div id ='head-name'>POWAH</div>
+        <hr />
+      </div>
+    </nav>
+    <%= yield %>
+  </body>
+</html>
