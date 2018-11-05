@@ -22,5 +22,4 @@ class ChangeDataService
       offset += offset_amount
     end
   end
-
 end
