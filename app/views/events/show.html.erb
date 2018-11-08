@@ -155,8 +155,6 @@
 }
 
 
-
-
 /*=============== //Home-team ===============*/
 </style>
 
@@ -172,7 +170,7 @@
   </div>
   <div class='row'>
     <div class='col-md-12'>
-      <%= line_chart @event.comments.group('petitions.source').group_by_day(:comment_created_at).count %>
+      <%= line_chart @event.comments.group('petitions.source').group_by_month(:comment_created_at).count %>
     </div>
   </div>
   <div class='row'>
